@@ -1,0 +1,1 @@
+<Project><PropertyGroup><NuGetAudit>true</NuGetAudit><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile><Deterministic>true</Deterministic><Nullable>enable</Nullable><EnableSourceControlManagerQueries>false</EnableSourceControlManagerQueries><IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion></PropertyGroup></Project>

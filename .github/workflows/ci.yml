@@ -1,0 +1,16 @@
+name: dotnet-controlled-and-package
+# SDK qualification is performed only in local Docker for this candidate.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controlled-and-package:
+    runs-on: ubuntu-24.04-arm
+    container:
+      image: mcr.microsoft.com/dotnet/sdk@sha256:afd0ccff9d306812a69ef0f47458376b6acb544ae866cfc4b8d28ff0eef35ea7
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: scripts/verify.sh /usr/share/dotnet/dotnet

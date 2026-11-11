@@ -1,0 +1,9 @@
+bin/
+obj/
+artifacts/
+.nuget/
+*.user
+
+# macOS metadata
+.DS_Store
+._*

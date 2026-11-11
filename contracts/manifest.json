@@ -1,0 +1,19 @@
+{
+  "contracts": [
+    "contracts/api1/fiscal.openapi.json",
+    "contracts/api1/files.openapi.json",
+    "contracts/api1/b2b.openapi.json",
+    "contracts/api2/cte-issuance.openapi.json",
+    "contracts/api2/dce-issuance.openapi.json",
+    "contracts/api2/emitter-files.openapi.json",
+    "contracts/api2/emitter-reads.openapi.json",
+    "contracts/api2/mdfe-issuance.openapi.json",
+    "contracts/api2/monitor-documents.openapi.json",
+    "contracts/api2/monitor-management.openapi.json",
+    "contracts/api2/monitor-reads.openapi.json",
+    "contracts/api2/nfcom-issuance.openapi.json",
+    "contracts/api2/nfse-issuance.openapi.json",
+    "contracts/api2/reports.openapi.json"
+  ],
+  "status": "partial_fiscal_program"
+}

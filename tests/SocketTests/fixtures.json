@@ -1,0 +1,2220 @@
+[
+  {
+    "id": "nfeGetCertificateValidity",
+    "input": {},
+    "response": {
+      "expiration": 1
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeGetSefazStatus",
+    "input": {},
+    "response": {
+      "status": "online"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeGetDocument",
+    "input": {
+      "chave": "00000000000000000000000000000000000000000000",
+      "uuid": "00000000-0000-4000-8000-000000000001",
+      "ID": "0",
+      "id": "0",
+      "ambiente": 1
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "status": "new_provider_state",
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeQueryDocument",
+    "input": {
+      "body": {
+        "chave": "00000000000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "status": "new_provider_state",
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeCreateCorrection",
+    "input": {
+      "body": {
+        "correcao": "000000000000000",
+        "chave": "00000000000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "uuid": "000000000000000000000000000000000000",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeCreateManifestation",
+    "input": {
+      "body": {
+        "chave": "00000000000000000000000000000000000000000000",
+        "ambiente": 2,
+        "evento": "210240",
+        "justificativa": "The goods were never delivered."
+      }
+    },
+    "response": {
+      "uuid": "000000000000000000000000000000000000",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeCancelDocument",
+    "input": {
+      "body": {
+        "motivo": "000000000000000",
+        "chave": "00000000000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeVoidNumbering",
+    "input": {
+      "body": {
+        "sequencia": "0",
+        "motivo": "000000000000000",
+        "ambiente": 1,
+        "serie": "0",
+        "modelo": "1"
+      }
+    },
+    "response": {
+      "xml": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeCreatePaymentEvent",
+    "input": {
+      "body": {
+        "uuid": "00000000-0000-4000-8000-000000000000",
+        "pagamento": {
+          "forma_pagamento": "01",
+          "valor_pagamento": "0.00",
+          "data_pagamento": "2026-10-25"
+        }
+      }
+    },
+    "response": {
+      "uuid": "000000000000000000000000000000000000",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeCancelPaymentEvent",
+    "input": {
+      "body": {
+        "uuid": "000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "uuid": "000000000000000000000000000000000000",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeCancelIbsCbsEvent",
+    "input": {
+      "body": {
+        "uuid": "000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "uuid": "000000000000000000000000000000000000",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeListTaxClasses",
+    "input": {},
+    "response": [],
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDeleteTaxClasses",
+    "input": {
+      "body": {
+        "referencia": "0"
+      }
+    },
+    "response": [],
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeSaveTaxClasses",
+    "input": {
+      "body": {
+        "tipo": "nfcom",
+        "descricao": "Controlled communication class",
+        "codigo_classificacao": "100101",
+        "icms": {
+          "situacao_tributaria": "40"
+        },
+        "pis": {
+          "situacao_tributaria": "06"
+        },
+        "cofins": {
+          "situacao_tributaria": "06"
+        }
+      }
+    },
+    "response": {
+      "referencia": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeIssueDocument",
+    "input": {
+      "body": {
+        "operacao": 0,
+        "natureza_operacao": "0",
+        "modelo": "1",
+        "finalidade": 1,
+        "ambiente": 1,
+        "produtos": [
+          {
+            "nome": "0",
+            "codigo": "0",
+            "ncm": "00000000",
+            "quantidade": "0",
+            "unidade": "0",
+            "subtotal": "0",
+            "total": "0"
+          }
+        ],
+        "pedido": {
+          "presenca": 0,
+          "modalidade_frete": 0,
+          "pagamento": 0,
+          "forma_pagamento": "01"
+        },
+        "cliente": {
+          "cpf": "000.000.000-00",
+          "nome_completo": "Synthetic person",
+          "endereco": "Synthetic street",
+          "numero": "1",
+          "bairro": "Synthetic district",
+          "cidade": "Synthetic city",
+          "uf": "SP",
+          "cep": "01001-000"
+        }
+      }
+    },
+    "response": {
+      "danfe": "https://nfe.webmania.com.br/danfe/00000000-0000-4000-8000-000000000000/"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeIssueReturn",
+    "input": {
+      "body": {
+        "natureza_operacao": "0",
+        "ambiente": 1,
+        "chave": "00000000000000000000000000000000000000000000",
+        "classe_imposto": "0"
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "status": "new_provider_state",
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeIssueAdjustment",
+    "input": {
+      "body": {
+        "operacao": 0,
+        "natureza_operacao": "0",
+        "codigo_cfop": "0000",
+        "ambiente": 1,
+        "cliente": {}
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "status": "new_provider_state",
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeIssueComplement",
+    "input": {
+      "body": {
+        "operacao": 0,
+        "natureza_operacao": "0",
+        "ambiente": 1,
+        "cliente": {},
+        "chave": "00000000000000000000000000000000000000000000",
+        "produtos": [
+          {}
+        ]
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "status": "new_provider_state",
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fiscalUpdateCompany",
+    "input": {
+      "body": {
+        "cnae": null
+      }
+    },
+    "response": {
+      "success": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fiscalCreateOrPollReport",
+    "input": {
+      "body": {
+        "modelo": "nfe",
+        "relatorio": "danfe",
+        "numero_inicio": "1",
+        "numero_final": "5"
+      }
+    },
+    "response": {
+      "uuid": "000000000000000000000000000000000000",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeCreateIbsCbsEvent",
+    "input": {
+      "body": {
+        "chave": "00000000000000000000000000000000000000000000",
+        "ambiente": 2,
+        "cod_evento": "112110"
+      }
+    },
+    "response": {
+      "uuid": "000000000000000000000000000000000000",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadDanfe",
+    "input": {
+      "identifier": "000000000000000000000000000000000000"
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadSimpleDanfe",
+    "input": {
+      "identifier": "000000000000000000000000000000000000"
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadLabelDanfe",
+    "input": {
+      "identifier": "000000000000000000000000000000000000"
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadCorrectionPdf",
+    "input": {
+      "identifier": "000000000000000000000000000000000000"
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadCorrectionPdfSequence",
+    "input": {
+      "identifier": "000000000000000000000000000000000000",
+      "event": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadXml",
+    "input": {
+      "identifier": "000000000000000000000000000000000000",
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadCancellationXml",
+    "input": {
+      "identifier": "000000000000000000000000000000000000",
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadCorrectionXml",
+    "input": {
+      "identifier": "000000000000000000000000000000000000",
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadCorrectionXmlSequence",
+    "input": {
+      "identifier": "000000000000000000000000000000000000",
+      "event": 1,
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadManifestationXml",
+    "input": {
+      "uuid": "000000000000000000000000000000000000",
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadPaymentEventXml",
+    "input": {
+      "identifier": "000000000000000000000000000000000000",
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadPaymentEventXmlSequence",
+    "input": {
+      "identifier": "000000000000000000000000000000000000",
+      "event": 1,
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "nfeDownloadIbsCbsEventXml",
+    "input": {
+      "uuid": "000000000000000000000000000000000000",
+      "download": 1
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fiscalDownloadReport",
+    "input": {
+      "uuid": "000000000000000000000000000000000000"
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "b2bV1CreateCompanies",
+    "input": {
+      "body": {
+        "quantidade": 1
+      }
+    },
+    "response": [
+      {
+        "id": 1,
+        "consumer_key": "INERT_TEST_PLACEHOLDER",
+        "consumer_secret": "INERT_TEST_PLACEHOLDER",
+        "access_token": "INERT_TEST_PLACEHOLDER",
+        "access_token_secret": "INERT_TEST_PLACEHOLDER",
+        "bearer_access_token": "",
+        "bearer_access_token_status": "pending",
+        "bearer_access_token_pending": true,
+        "future_field": {
+          "preserved": true
+        }
+      }
+    ],
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "b2bV1ListCompanies",
+    "input": {},
+    "response": [
+      {
+        "id": 1,
+        "cnpj": "",
+        "razao_social": null,
+        "credenciais": {
+          "consumer_key": "INERT_TEST_PLACEHOLDER",
+          "consumer_secret": "INERT_TEST_PLACEHOLDER",
+          "access_token": "INERT_TEST_PLACEHOLDER",
+          "access_token_secret": "INERT_TEST_PLACEHOLDER",
+          "bearer_access_token": "",
+          "bearer_access_token_status": "pending",
+          "bearer_access_token_pending": true
+        }
+      }
+    ],
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "b2bV1GetProcessedRequests",
+    "input": {
+      "mes": "01",
+      "ano": "2026"
+    },
+    "response": {
+      "total_notas_processadas": 0,
+      "empresas": []
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterIssueCte",
+    "input": {
+      "body": {
+        "ambiente": 2,
+        "modelo": "cte_os",
+        "natureza_operacao": "Synthetic passenger transport",
+        "modalidade": 1,
+        "finalidade": "0",
+        "contribuicao_tomador": 9,
+        "indicador_tomador": 4,
+        "local_inicio_prestacao": {
+          "cidade": "Synthetic origin",
+          "uf": "SP"
+        },
+        "local_termino_prestacao": {
+          "cidade": "Synthetic destination",
+          "uf": "RJ"
+        },
+        "tomador": {
+          "cnpj": "00000000000000",
+          "nome_razao": "Synthetic company",
+          "endereco": "Synthetic street",
+          "numero": "001",
+          "bairro": "Synthetic",
+          "cidade": "Synthetic city",
+          "uf": "SP"
+        },
+        "servico": {
+          "tipo": 6,
+          "descricao": "Synthetic passenger transport",
+          "valor_total": "100.00",
+          "valor_recebido": "100.00"
+        },
+        "carga": {
+          "produto_predominante": "Synthetic service",
+          "valor_total": "100.00",
+          "quantidades": [
+            {
+              "quantidade": "1.0000"
+            }
+          ]
+        },
+        "impostos": {
+          "cfop": "6353",
+          "classificacao_tributaria": "SN"
+        },
+        "documentos_fiscais": [
+          {
+            "numero": "001",
+            "data_emissao": "2026-01-01",
+            "valor_documento": "100.00"
+          }
+        ],
+        "rodoviario": {
+          "taf_cte_os": "000000000000",
+          "tipo_fretamento": "2"
+        }
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterIssueSimplifiedCte",
+    "input": {
+      "body": {
+        "ambiente": "1",
+        "modelo": "cte",
+        "nfe_xml": "0"
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCancelCte",
+    "input": {
+      "body": {
+        "uuid": "00000000-0000-4000-8000-000000000000",
+        "justificativa": "Synthetic cancellation justification"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCorrectCte",
+    "input": {
+      "body": {
+        "alteracoes": [
+          {
+            "campo": "0",
+            "grupo": "0",
+            "valor": "0"
+          }
+        ],
+        "chave": {},
+        "uuid": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterConfirmCteDelivery",
+    "input": {
+      "body": {
+        "uuid": "00000000-0000-4000-8000-000000000001",
+        "notas_fiscais": [
+          "123456ab12cd34ef5600000000000000000000000000"
+        ],
+        "comprovante": "SYNTHETIC_IMAGE_PLACEHOLDER"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCancelCteDelivery",
+    "input": {
+      "body": {
+        "chave": "00000000000000000000000000000000000000000000",
+        "protocolo": "0"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterLinkCtePayment",
+    "input": {
+      "body": {
+        "pagamento": {
+          "cnpj_base_psp": "00000000",
+          "cnpj_recebedor": "00000000000000",
+          "id_transacao": "00",
+          "n_pag": 1,
+          "tp_meio_pagamento": "0"
+        },
+        "chave": "00000000000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCancelCtePaymentLink",
+    "input": {
+      "body": {
+        "chave": "00000000000000000000000000000000000000000000",
+        "protocolo_vinculacao": "000000000000000"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetCte",
+    "input": {
+      "identifier": "0"
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetCtePaymentEvents",
+    "input": {
+      "identifier": "0"
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0",
+      "eventos_pagamento": [],
+      "total_eventos": 0
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterIssueDce",
+    "input": {
+      "body": {
+        "ambiente": "1",
+        "itens": [
+          {
+            "descricao": "0",
+            "ncm": "00000000",
+            "quantidade": 0.0,
+            "valor_unitario": 0.0
+          }
+        ],
+        "cliente": {
+          "cpf": "00000000000",
+          "nome_completo": "Synthetic recipient"
+        },
+        "emitente": {
+          "cpf": "00000000000",
+          "nome_completo": "Synthetic issuer"
+        }
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCancelDce",
+    "input": {
+      "body": {
+        "chave": "123456ab12cd34ef5600000000000000000000000000",
+        "justificativa": "Synthetic schema example only"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetDce",
+    "input": {
+      "identifier": "0"
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetNfseXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetNfsePdf",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetNfseRpsPdf",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetCteXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetCteCancelXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetCtePdf",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetCteCorrectionXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetCteCorrectionPdf",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetMdfeXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetMdfePdf",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetNfcomXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetNfcomCancelXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetNfcomPdf",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetDceXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetDceCancelXml",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fileGetDcePdf",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetNfseProviderStatus",
+    "input": {
+      "todos_servicos": false
+    },
+    "response": {
+      "status": true,
+      "ambientes": [
+        1,
+        2
+      ],
+      "autenticacao": [
+        "certificado_a1"
+      ],
+      "emissao": [
+        "nfse"
+      ],
+      "funcoes": [
+        "consultar"
+      ],
+      "pdf_nfse": false,
+      "pdf_sincrono": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetNfcomServiceStatus",
+    "input": {},
+    "response": {
+      "operacional": false,
+      "mensagem": "synthetic offline"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetNfse",
+    "input": {
+      "identifier": "0"
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "modelo": "lote_rps",
+      "status": "processando",
+      "info_nfse": [],
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetNfcom",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "uuid": "0",
+      "modelo": "nfcom",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetNfcomPaymentEvents",
+    "input": {
+      "identifier": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0",
+      "eventos_pagamento": [],
+      "total_eventos": 0
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterManifestNfse",
+    "input": {
+      "body": {
+        "ambiente": 2,
+        "chave": "00000000000000000000000000000000000000000000000000",
+        "manifestador": 1,
+        "evento": 1
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "modelo": "lote_rps",
+      "status": "processando",
+      "info_nfse": [],
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterIssueMdfe",
+    "input": {
+      "body": {
+        "ambiente": "1",
+        "carregamento": [
+          {
+            "nome_municipio": "00"
+          }
+        ],
+        "descarregamento": [
+          {
+            "documentos_fiscais": [
+              {
+                "chave": "00000000000000000000000000000000000000000000"
+              }
+            ],
+            "nome_municipio": "00"
+          }
+        ],
+        "emitente": "1",
+        "modalidade": "1",
+        "peso_bruto": "0",
+        "uf_carregamento": "0",
+        "uf_descarregamento": "0",
+        "unidade": "01",
+        "valor_carga": "0",
+        "rodoviario": {}
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCloseMdfe",
+    "input": {
+      "body": {
+        "chave": "00000000000000000000000000000000000000000000",
+        "codigo_municipio": "0000000"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCancelMdfe",
+    "input": {
+      "body": {
+        "chave": "123456ab12cd34ef5600000000000000000000000000",
+        "justificativa": "Synthetic schema example only"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterAddMdfeConductor",
+    "input": {
+      "body": {
+        "cpf": "0",
+        "nome": "0",
+        "chave": "00000000000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterGetMdfe",
+    "input": {
+      "key": "0"
+    },
+    "response": {
+      "uuid": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorSearchDocuments",
+    "input": {
+      "body": {
+        "modelo": "nfe",
+        "filtros": {
+          "empresa_uuid": [
+            "00000000-0000-0000-0000-000000000000"
+          ],
+          "categoria": [
+            "recebidas"
+          ],
+          "status": [
+            "aprovado"
+          ]
+        },
+        "filtros_modelo": {
+          "operacao": [
+            "0",
+            1
+          ]
+        },
+        "paginacao": "cursor"
+      },
+      "page": 1,
+      "per_page": 10
+    },
+    "response": {
+      "data": [],
+      "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 1,
+        "total": 0
+      }
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorGetDocument",
+    "input": {
+      "fd": "00000000-0000-4000-8000-000000000001",
+      "atualizar_status": 0
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "empresa_uuid": "00000000-0000-4000-8000-000000000000",
+      "modelo": "nfe",
+      "status": "aprovado",
+      "categoria": "recebidas",
+      "data_emissao": "2025-02-27 13:17:00",
+      "numero": 200,
+      "serie": 1,
+      "chave": "00000000000000000000000000000000000000000000",
+      "valor": 6200,
+      "operacao": 0,
+      "finalidade": 1,
+      "cfop": [
+        "2909"
+      ],
+      "natureza_operacao": "Compra para industrialização",
+      "emitente": {
+        "cnpj": "00000000000000",
+        "razao_social": "EMPRESA FORNECEDORA LTDA",
+        "ie": "000000000000",
+        "uf": "SP",
+        "endereco": "Rua das Indústrias",
+        "numero": "1500",
+        "complemento": "Galpão 2",
+        "bairro": "Distrito Industrial",
+        "cep": "12345-678",
+        "cidade": "São Paulo",
+        "telefone": "11999999999",
+        "email": "fiscal@fornecedor.com"
+      },
+      "cliente": {
+        "cnpj": "11111111000111",
+        "razao_social": "EMPRESA COMPRADORA S/A",
+        "ie": "111111111111",
+        "uf": "SP",
+        "endereco": "Av. Principal",
+        "numero": "1000",
+        "bairro": "Centro",
+        "cep": "98765-432",
+        "cidade": "São Paulo",
+        "telefone": "11888888888",
+        "email": "compras@empresa.com"
+      },
+      "pedido": {
+        "numero_pedido": "PED-2025-001234",
+        "numero_compra": "OC-2025-005678"
+      },
+      "produtos": [
+        {
+          "codigo": "MP001",
+          "descricao": "MATÉRIA PRIMA ESPECIAL TIPO A",
+          "ncm": "39269090",
+          "cfop": "2909",
+          "unidade": "KG",
+          "quantidade": 1000,
+          "valor_unitario": 6.2,
+          "valor_total": 6200,
+          "impostos": {
+            "icms": {
+              "situacao_tributaria": "00",
+              "origem": 0,
+              "base_calculo": 6200,
+              "aliquota": 18,
+              "valor": 1116
+            },
+            "ipi": {
+              "situacao_tributaria": "50",
+              "base_calculo": 6200,
+              "aliquota": 5,
+              "valor": 310
+            },
+            "pis": {
+              "situacao_tributaria": "01",
+              "base_calculo": 6200,
+              "aliquota": 1.65,
+              "valor": 102.3
+            },
+            "cofins": {
+              "situacao_tributaria": "01",
+              "base_calculo": 6200,
+              "aliquota": 7.6,
+              "valor": 471.2
+            },
+            "ibs_cbs": {
+              "situacao_tributaria": "000",
+              "classificacao_tributaria": "000001",
+              "indicador_doacao": false,
+              "bc": 6200,
+              "valor_ibs": 124.0,
+              "ibs_estadual": {
+                "aliquota": 1.2,
+                "valor": 74.4,
+                "aliquota_diferimento": 0.1,
+                "valor_diferimento": 6.2,
+                "valor_devolvido": 3.1,
+                "aliquota_reducao": 0.2,
+                "aliquota_efetiva": 1.0
+              },
+              "ibs_municipal": {
+                "aliquota": 0.8,
+                "valor": 49.6,
+                "aliquota_diferimento": 0.05,
+                "valor_diferimento": 3.1,
+                "valor_devolvido": 1.24,
+                "aliquota_reducao": 0.1,
+                "aliquota_efetiva": 0.7
+              },
+              "cbs": {
+                "aliquota": 0.9,
+                "valor": 55.8,
+                "aliquota_diferimento": 0.03,
+                "valor_diferimento": 1.86,
+                "valor_devolvido": 0.62,
+                "aliquota_reducao": 0.05,
+                "aliquota_efetiva": 0.85
+              },
+              "situacao_tributaria_regular": "000",
+              "classificacao_tributaria_regular": "000001",
+              "tributacao_regular": {
+                "ibs_estadual": {
+                  "aliquota_efetiva": 1.1,
+                  "valor": 68.2
+                },
+                "ibs_municipal": {
+                  "aliquota_efetiva": 0.75,
+                  "valor": 46.5
+                },
+                "cbs": {
+                  "aliquota_efetiva": 0.88,
+                  "valor": 54.56
+                }
+              },
+              "compra_governamental": {
+                "ibs_estadual": {
+                  "aliquota": 1.0,
+                  "valor": 62.0
+                },
+                "ibs_municipal": {
+                  "aliquota": 0.6,
+                  "valor": 37.2
+                },
+                "cbs": {
+                  "aliquota": 0.7,
+                  "valor": 43.4
+                }
+              },
+              "tributacao_monofasica": {
+                "quantidade_bc": 1000.0,
+                "aliquota_ibs": 0.3,
+                "aliquota_cbs": 0.2,
+                "valor_ibs": 300.0,
+                "valor_cbs": 200.0,
+                "quantidade_bc_retencao": 200.0,
+                "aliquota_ibs_retencao": 0.1,
+                "aliquota_cbs_retencao": 0.05,
+                "valor_ibs_retencao": 20.0,
+                "valor_cbs_retencao": 10.0,
+                "quantidade_bc_retido": 100.0,
+                "aliquota_ibs_retido": 0.08,
+                "aliquota_cbs_retido": 0.04,
+                "valor_ibs_retido": 8.0,
+                "valor_cbs_retido": 4.0,
+                "aliquota_diferimento_ibs": 0.02,
+                "aliquota_diferimento_cbs": 0.01,
+                "valor_diferimento_ibs": 2.0,
+                "valor_diferimento_cbs": 1.0,
+                "valor_total_ibs": 330.0,
+                "valor_total_cbs": 215.0
+              },
+              "transferencia_credito": {
+                "valor_ibs": 6.2,
+                "valor_cbs": 3.1
+              },
+              "ajuste_competencia": {
+                "competencia_apuracao": "2026-01",
+                "valor_ibs": 4.96,
+                "valor_cbs": 2.48
+              },
+              "credito_presumido": {
+                "classificacao": "01",
+                "bc": 6200.0,
+                "aliquota_ibs": 0.5,
+                "valor_ibs": 31.0,
+                "valor_ibs_condicionado_suspensao": 1.24,
+                "aliquota_cbs": 0.3,
+                "valor_cbs": 18.6,
+                "valor_cbs_condicionado_suspensao": 0.62
+              },
+              "credito_presumido_zfm": {
+                "competencia_apuracao": "2026-01",
+                "classificacao": "02",
+                "valor_ibs": 12.4
+              },
+              "estorno_credito": {
+                "valor_ibs": 6.2,
+                "valor_cbs": 3.1
+              }
+            }
+          }
+        }
+      ],
+      "transporte": {
+        "modalidade_frete": 1,
+        "transportadora": {
+          "cnpj": "22222222000222",
+          "razao_social": "TRANSPORTADORA RÁPIDA LTDA",
+          "ie": "222222222222",
+          "endereco": "Rod. BR-101",
+          "numero": "KM 50",
+          "cidade": "São Paulo",
+          "uf": "SP"
+        },
+        "volumes": [
+          {
+            "quantidade": 10,
+            "especie": "CAIXA",
+            "marca": "FORNECEDOR",
+            "numeracao": "1-10",
+            "peso_liquido": 1000,
+            "peso_bruto": 1050
+          }
+        ],
+        "veiculo": {
+          "placa": "ABC1234",
+          "uf": "SP"
+        }
+      },
+      "totais": {
+        "icms_bc": 6200,
+        "icms_valor": 1116,
+        "icms_valor_desonerado": 0,
+        "icms_st_bc": 0,
+        "icms_st_valor": 0,
+        "fcp_valor": 0,
+        "fcp_st_valor": 0,
+        "fcp_st_retido_valor": 0,
+        "ipi_valor": 310,
+        "ipi_devolvido_valor": 0,
+        "pis_valor": 102.3,
+        "cofins_valor": 471.2,
+        "ii_valor": 0,
+        "valor_produtos": 6200,
+        "valor_seguro": 0,
+        "valor_outras_despesas": 0,
+        "valor_desconto": 0,
+        "valor_frete": 0,
+        "valor_total_nfe": 7826
+      },
+      "totais_issqn": {
+        "valor_servicos": 0,
+        "iss_bc": 0,
+        "iss_valor": 0,
+        "pis_valor": 0,
+        "cofins_valor": 0,
+        "data_competencia": "2025-02-27",
+        "deducao": 0,
+        "outras_retencoes": 0,
+        "desconto_incondicionado": 0,
+        "desconto_condicionado": 0,
+        "iss_retido_valor": 0,
+        "regime_especial_tributacao": "1"
+      },
+      "fatura": {
+        "numero": "2025/0200",
+        "valor_original": 6200,
+        "valor_desconto": 0,
+        "valor_liquido": 6200
+      },
+      "parcelas": [
+        {
+          "numero": "001",
+          "vencimento": "2025-03-27",
+          "valor": 3100
+        },
+        {
+          "numero": "002",
+          "vencimento": "2025-04-27",
+          "valor": 3100
+        }
+      ],
+      "responsavel_tecnico": {
+        "cnpj": "33333333000333",
+        "contato": "João Silva",
+        "email": "suporte@sistema.com",
+        "telefone": "11777777777"
+      },
+      "protocolo": "135250000123456"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorListDocumentEvents",
+    "input": {
+      "fd": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "data": []
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorManifestDocument",
+    "input": {
+      "fd": "00000000-0000-4000-8000-000000000001",
+      "body": {
+        "evento": 1,
+        "manifestacao": 3,
+        "justificativa": "Synthetic justified operation"
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "documento_uuid": "00000000-0000-4000-8000-000000000000",
+      "protocolo": "0000000000000000",
+      "registrado_em": "2025-06-02 13:17:00",
+      "tipo_evento": 110110,
+      "descricao_evento": "Carta de correção",
+      "cnpj_autor": "00000000000000",
+      "cpf_autor": "00000000000",
+      "resumo": false,
+      "correcao": "XXXXXX XXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX",
+      "log": {
+        "tpEvento": "110110",
+        "xEvento": "Carta de Correcao",
+        "nProt": "0000000000000000",
+        "dhRegEvento": "2025-06-02T13:17:00-03:00",
+        "cStat": "135",
+        "xMotivo": "Evento registrado e vinculado a NF-e"
+      }
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorListReports",
+    "input": {
+      "status": "0",
+      "page": 1,
+      "per_page": 10
+    },
+    "response": {
+      "data": [],
+      "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 1,
+        "total": 0
+      }
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorDownloadReport",
+    "input": {
+      "report": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {},
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorImportDocument",
+    "input": {
+      "body": {
+        "empresa_uuid": "00000000-0000-4000-8000-000000000000",
+        "chave": "00000000000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "empresa_uuid": "00000000-0000-4000-8000-000000000000",
+      "modelo": "nfe",
+      "status": "aprovado",
+      "categoria": "recebidas",
+      "data_emissao": "2025-02-27 13:17:00",
+      "numero": 200,
+      "serie": 1,
+      "chave": "00000000000000000000000000000000000000000000",
+      "valor": 6200,
+      "operacao": 0,
+      "finalidade": 1,
+      "cfop": [
+        "2909"
+      ],
+      "natureza_operacao": "Compra para industrialização",
+      "emitente": {
+        "cnpj": "00000000000000",
+        "razao_social": "EMPRESA FORNECEDORA LTDA",
+        "ie": "000000000000",
+        "uf": "SP",
+        "endereco": "Rua das Indústrias",
+        "numero": "1500",
+        "complemento": "Galpão 2",
+        "bairro": "Distrito Industrial",
+        "cep": "12345-678",
+        "cidade": "São Paulo",
+        "telefone": "11999999999",
+        "email": "fiscal@fornecedor.com"
+      },
+      "cliente": {
+        "cnpj": "11111111000111",
+        "razao_social": "EMPRESA COMPRADORA S/A",
+        "ie": "111111111111",
+        "uf": "SP",
+        "endereco": "Av. Principal",
+        "numero": "1000",
+        "bairro": "Centro",
+        "cep": "98765-432",
+        "cidade": "São Paulo",
+        "telefone": "11888888888",
+        "email": "compras@empresa.com"
+      },
+      "pedido": {
+        "numero_pedido": "PED-2025-001234",
+        "numero_compra": "OC-2025-005678"
+      },
+      "produtos": [
+        {
+          "codigo": "MP001",
+          "descricao": "MATÉRIA PRIMA ESPECIAL TIPO A",
+          "ncm": "39269090",
+          "cfop": "2909",
+          "unidade": "KG",
+          "quantidade": 1000,
+          "valor_unitario": 6.2,
+          "valor_total": 6200,
+          "impostos": {
+            "icms": {
+              "situacao_tributaria": "00",
+              "origem": 0,
+              "base_calculo": 6200,
+              "aliquota": 18,
+              "valor": 1116
+            },
+            "ipi": {
+              "situacao_tributaria": "50",
+              "base_calculo": 6200,
+              "aliquota": 5,
+              "valor": 310
+            },
+            "pis": {
+              "situacao_tributaria": "01",
+              "base_calculo": 6200,
+              "aliquota": 1.65,
+              "valor": 102.3
+            },
+            "cofins": {
+              "situacao_tributaria": "01",
+              "base_calculo": 6200,
+              "aliquota": 7.6,
+              "valor": 471.2
+            },
+            "ibs_cbs": {
+              "situacao_tributaria": "000",
+              "classificacao_tributaria": "000001",
+              "indicador_doacao": false,
+              "bc": 6200,
+              "valor_ibs": 124.0,
+              "ibs_estadual": {
+                "aliquota": 1.2,
+                "valor": 74.4,
+                "aliquota_diferimento": 0.1,
+                "valor_diferimento": 6.2,
+                "valor_devolvido": 3.1,
+                "aliquota_reducao": 0.2,
+                "aliquota_efetiva": 1.0
+              },
+              "ibs_municipal": {
+                "aliquota": 0.8,
+                "valor": 49.6,
+                "aliquota_diferimento": 0.05,
+                "valor_diferimento": 3.1,
+                "valor_devolvido": 1.24,
+                "aliquota_reducao": 0.1,
+                "aliquota_efetiva": 0.7
+              },
+              "cbs": {
+                "aliquota": 0.9,
+                "valor": 55.8,
+                "aliquota_diferimento": 0.03,
+                "valor_diferimento": 1.86,
+                "valor_devolvido": 0.62,
+                "aliquota_reducao": 0.05,
+                "aliquota_efetiva": 0.85
+              },
+              "situacao_tributaria_regular": "000",
+              "classificacao_tributaria_regular": "000001",
+              "tributacao_regular": {
+                "ibs_estadual": {
+                  "aliquota_efetiva": 1.1,
+                  "valor": 68.2
+                },
+                "ibs_municipal": {
+                  "aliquota_efetiva": 0.75,
+                  "valor": 46.5
+                },
+                "cbs": {
+                  "aliquota_efetiva": 0.88,
+                  "valor": 54.56
+                }
+              },
+              "compra_governamental": {
+                "ibs_estadual": {
+                  "aliquota": 1.0,
+                  "valor": 62.0
+                },
+                "ibs_municipal": {
+                  "aliquota": 0.6,
+                  "valor": 37.2
+                },
+                "cbs": {
+                  "aliquota": 0.7,
+                  "valor": 43.4
+                }
+              },
+              "tributacao_monofasica": {
+                "quantidade_bc": 1000.0,
+                "aliquota_ibs": 0.3,
+                "aliquota_cbs": 0.2,
+                "valor_ibs": 300.0,
+                "valor_cbs": 200.0,
+                "quantidade_bc_retencao": 200.0,
+                "aliquota_ibs_retencao": 0.1,
+                "aliquota_cbs_retencao": 0.05,
+                "valor_ibs_retencao": 20.0,
+                "valor_cbs_retencao": 10.0,
+                "quantidade_bc_retido": 100.0,
+                "aliquota_ibs_retido": 0.08,
+                "aliquota_cbs_retido": 0.04,
+                "valor_ibs_retido": 8.0,
+                "valor_cbs_retido": 4.0,
+                "aliquota_diferimento_ibs": 0.02,
+                "aliquota_diferimento_cbs": 0.01,
+                "valor_diferimento_ibs": 2.0,
+                "valor_diferimento_cbs": 1.0,
+                "valor_total_ibs": 330.0,
+                "valor_total_cbs": 215.0
+              },
+              "transferencia_credito": {
+                "valor_ibs": 6.2,
+                "valor_cbs": 3.1
+              },
+              "ajuste_competencia": {
+                "competencia_apuracao": "2026-01",
+                "valor_ibs": 4.96,
+                "valor_cbs": 2.48
+              },
+              "credito_presumido": {
+                "classificacao": "01",
+                "bc": 6200.0,
+                "aliquota_ibs": 0.5,
+                "valor_ibs": 31.0,
+                "valor_ibs_condicionado_suspensao": 1.24,
+                "aliquota_cbs": 0.3,
+                "valor_cbs": 18.6,
+                "valor_cbs_condicionado_suspensao": 0.62
+              },
+              "credito_presumido_zfm": {
+                "competencia_apuracao": "2026-01",
+                "classificacao": "02",
+                "valor_ibs": 12.4
+              },
+              "estorno_credito": {
+                "valor_ibs": 6.2,
+                "valor_cbs": 3.1
+              }
+            }
+          }
+        }
+      ],
+      "transporte": {
+        "modalidade_frete": 1,
+        "transportadora": {
+          "cnpj": "22222222000222",
+          "razao_social": "TRANSPORTADORA RÁPIDA LTDA",
+          "ie": "222222222222",
+          "endereco": "Rod. BR-101",
+          "numero": "KM 50",
+          "cidade": "São Paulo",
+          "uf": "SP"
+        },
+        "volumes": [
+          {
+            "quantidade": 10,
+            "especie": "CAIXA",
+            "marca": "FORNECEDOR",
+            "numeracao": "1-10",
+            "peso_liquido": 1000,
+            "peso_bruto": 1050
+          }
+        ],
+        "veiculo": {
+          "placa": "ABC1234",
+          "uf": "SP"
+        }
+      },
+      "totais": {
+        "icms_bc": 6200,
+        "icms_valor": 1116,
+        "icms_valor_desonerado": 0,
+        "icms_st_bc": 0,
+        "icms_st_valor": 0,
+        "fcp_valor": 0,
+        "fcp_st_valor": 0,
+        "fcp_st_retido_valor": 0,
+        "ipi_valor": 310,
+        "ipi_devolvido_valor": 0,
+        "pis_valor": 102.3,
+        "cofins_valor": 471.2,
+        "ii_valor": 0,
+        "valor_produtos": 6200,
+        "valor_seguro": 0,
+        "valor_outras_despesas": 0,
+        "valor_desconto": 0,
+        "valor_frete": 0,
+        "valor_total_nfe": 7826
+      },
+      "totais_issqn": {
+        "valor_servicos": 0,
+        "iss_bc": 0,
+        "iss_valor": 0,
+        "pis_valor": 0,
+        "cofins_valor": 0,
+        "data_competencia": "2025-02-27",
+        "deducao": 0,
+        "outras_retencoes": 0,
+        "desconto_incondicionado": 0,
+        "desconto_condicionado": 0,
+        "iss_retido_valor": 0,
+        "regime_especial_tributacao": "1"
+      },
+      "fatura": {
+        "numero": "2025/0200",
+        "valor_original": 6200,
+        "valor_desconto": 0,
+        "valor_liquido": 6200
+      },
+      "parcelas": [
+        {
+          "numero": "001",
+          "vencimento": "2025-03-27",
+          "valor": 3100
+        },
+        {
+          "numero": "002",
+          "vencimento": "2025-04-27",
+          "valor": 3100
+        }
+      ],
+      "responsavel_tecnico": {
+        "cnpj": "33333333000333",
+        "contato": "João Silva",
+        "email": "suporte@sistema.com",
+        "telefone": "11777777777"
+      },
+      "protocolo": "135250000123456"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorGetImportStatus",
+    "input": {
+      "uuid": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "status": "processando",
+      "processado": 0,
+      "importados": [],
+      "descartados": []
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorCreateCompany",
+    "input": {
+      "body": {
+        "cnpj": "00000000000000",
+        "razao_social": "Synthetic company",
+        "cep": "01001000",
+        "certificado_base64": "PHRlc3QvPg==",
+        "certificado_senha": "synthetic-placeholder"
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000001"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorUpdateCompany",
+    "input": {
+      "company": "00000000-0000-4000-8000-000000000001",
+      "body": {
+        "modelos_download": []
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000001"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorCreateCompanyMunicipality",
+    "input": {
+      "company": "00000000-0000-4000-8000-000000000001",
+      "body": {
+        "codigo_ibge": "3550308"
+      }
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000001",
+      "tipo_download": 1,
+      "municipio": "0",
+      "uf": "0",
+      "codigo_ibge": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorUpdateCompanyMunicipality",
+    "input": {
+      "company": "00000000-0000-4000-8000-000000000001",
+      "download": "00000000-0000-4000-8000-000000000001",
+      "body": {}
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000001",
+      "tipo_download": 1,
+      "municipio": "0",
+      "uf": "0",
+      "codigo_ibge": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorDeleteCompanyMunicipality",
+    "input": {
+      "company": "00000000-0000-4000-8000-000000000001",
+      "download": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "msg": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorListCompanies",
+    "input": {
+      "page": 1,
+      "per_page": 10,
+      "pesquisa": "000"
+    },
+    "response": {
+      "data": [],
+      "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 50,
+        "total": 0
+      }
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorGetCompany",
+    "input": {
+      "company": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000000",
+      "modelos_download": [
+        "nfse"
+      ],
+      "future": false
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorListCompanyMunicipalities",
+    "input": {
+      "company": "00000000-0000-4000-8000-000000000001",
+      "page": 1,
+      "per_page": 10,
+      "municipio": "000",
+      "uf": "00",
+      "codigo_ibge": "0000000"
+    },
+    "response": {
+      "data": [],
+      "meta": {
+        "current_page": 1,
+        "last_page": 1,
+        "per_page": 1,
+        "total": 0
+      }
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorGetCompanyMunicipality",
+    "input": {
+      "company": "00000000-0000-4000-8000-000000000001",
+      "download": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "uuid": "00000000-0000-4000-8000-000000000001",
+      "tipo_download": 1,
+      "municipio": "0",
+      "uf": "0",
+      "codigo_ibge": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorListAvailableMunicipalities",
+    "input": {
+      "codigo_ibge": "0000000"
+    },
+    "response": {
+      "data": []
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "monitorGetDownloadStatistics",
+    "input": {
+      "ano": 2025,
+      "mes": 1
+    },
+    "response": {
+      "total_downloads": 0,
+      "empresas": []
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterIssueNfcom",
+    "input": {
+      "body": {
+        "ambiente": 2,
+        "natureza_operacao": "Synthetic communication",
+        "tipo_operacao": 1,
+        "finalidade": 1,
+        "tipo_faturamento": 0,
+        "cliente": {
+          "cnpj": "00000000000000",
+          "razao_social": "Synthetic company",
+          "indicador_ie": 9,
+          "endereco": {
+            "logradouro": "Synthetic street",
+            "numero": "001",
+            "bairro": "Synthetic",
+            "codigo_municipio": "3550308",
+            "municipio": "Synthetic municipality",
+            "uf": "SP",
+            "cep": "00000000"
+          }
+        },
+        "assinante": {
+          "codigo": "SYNTHETIC",
+          "tipo": 1,
+          "tipo_servico": 4,
+          "contrato": {
+            "numero": "SYNTHETIC",
+            "data_inicio": "2026-01-01",
+            "data_fim": "2026-12-31"
+          }
+        },
+        "itens": [
+          {
+            "descricao": "Synthetic communication service",
+            "unidade": "MES",
+            "quantidade": "1.0000",
+            "valor_unitario": "99.90",
+            "valor_total": "99.90",
+            "indicador_total": 1,
+            "classe_imposto": "REF123456"
+          }
+        ]
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "modelo": "nfcom",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCancelNfcom",
+    "input": {
+      "body": {
+        "chave": "123456ab12cd34ef5600000000000000000000000000",
+        "justificativa": "Synthetic schema example only"
+      }
+    },
+    "response": {
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterIssueNfse",
+    "input": {
+      "body": {
+        "ambiente": 2,
+        "rps": [
+          {
+            "servico": {
+              "discriminacao": "Synthetic service",
+              "valor_servicos": "100.00",
+              "iss_retido": 2
+            }
+          }
+        ]
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "modelo": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterCancelNfse",
+    "input": {
+      "body": {
+        "codigo_verificacao": "0"
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "modelo": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "emitterReplaceNfse",
+    "input": {
+      "body": {
+        "ambiente": "1",
+        "motivo": "1",
+        "rps": [
+          {
+            "servico": {
+              "discriminacao": "Synthetic service",
+              "valor_servicos": "100.00",
+              "iss_retido": 2,
+              "codigo_servico": "0101"
+            }
+          }
+        ],
+        "chave": "00000000000000000000000000000000000000000000000000"
+      }
+    },
+    "response": {
+      "uuid": "0",
+      "modelo": "0",
+      "status": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  },
+  {
+    "id": "fiscalDownloadReportV2",
+    "input": {
+      "uuid": "00000000-0000-4000-8000-000000000001"
+    },
+    "response": {
+      "error": "0"
+    },
+    "requestValid": true,
+    "responseValid": true
+  }
+]

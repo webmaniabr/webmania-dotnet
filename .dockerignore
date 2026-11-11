@@ -1,0 +1,8 @@
+.git
+**/bin
+**/obj
+artifacts
+
+# macOS metadata
+**/.DS_Store
+**/._*

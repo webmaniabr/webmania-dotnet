@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PackageId>Webmania.Sdk</PackageId>
+    <Version>0.1.0-preview.6</Version>
+    <Authors>Webmania</Authors>
+    <Description>Webmania Emissor Fiscal and Monitor Fiscal SDK for C#, F# and Visual Basic. Partial contract coverage status is preserved.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/webmaniabr/webmania-dotnet</RepositoryUrl>
+    <DebugType>embedded</DebugType>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <PathMap>$(MSBuildProjectDirectory)=/_/Webmania.Sdk</PathMap>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Webmania.DnsHelper/Webmania.DnsHelper.csproj" ReferenceOutputAssembly="false" />
+    <EmbeddedResource Include="../Webmania.DnsHelper/bin/$(Configuration)/net10.0/Webmania.DnsHelper.dll" LogicalName="Webmania.Dns.Webmania.DnsHelper.dll" />
+    <EmbeddedResource Include="../Webmania.DnsHelper/bin/$(Configuration)/net10.0/Webmania.DnsHelper.runtimeconfig.json" LogicalName="Webmania.Dns.Webmania.DnsHelper.runtimeconfig.json" />
+    <EmbeddedResource Include="operations.json" />
+    <EmbeddedResource Include="../../contracts/**/*.openapi.json" LogicalName="%(Filename)%(Extension)" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="/" />
+    <None Include="../../contracts.lock.json" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>
